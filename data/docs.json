@@ -1,10 +1,10 @@
 {
     "FalcoTCP" : {
-        "0" : ["Why does the project exist?",""],
-        "1" : ["Protocol",""],
-        "2" : ["Binary structure",""],
-        "3" : ["Errors and threatment",""],
-        "4" : ["Security",""],
-        "5" : ["Implementations",""]
+        "0" : ["Why does the project exist?","https://raw.githubusercontent.com/FeatheredSystems/FeatheredWebsite/refs/heads/main/data/docs_text/FalcoTCP/0.md"],
+        "1" : ["Protocol","https://raw.githubusercontent.com/FeatheredSystems/FeatheredWebsite/refs/heads/main/data/docs_text/FalcoTCP/1.md"],
+        "2" : ["Binary structure","https://raw.githubusercontent.com/FeatheredSystems/FeatheredWebsite/refs/heads/main/data/docs_text/FalcoTCP/2.md"],
+        "3" : ["Errors and threatment","https://raw.githubusercontent.com/FeatheredSystems/FeatheredWebsite/refs/heads/main/data/docs_text/FalcoTCP/3.md"],
+        "4" : ["Security","https://raw.githubusercontent.com/FeatheredSystems/FeatheredWebsite/refs/heads/main/data/docs_text/FalcoTCP/4.md"],
+        "5" : ["Implementations","https://raw.githubusercontent.com/FeatheredSystems/FeatheredWebsite/refs/heads/main/data/docs_text/FalcoTCP/5.md"]
     }
 }
