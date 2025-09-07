@@ -1,10 +1,25 @@
 {
     "FalcoTCP" : {
-        "0" : ["Why does the project exist?","https://raw.githubusercontent.com/FeatheredSystems/FeatheredWebsite/refs/heads/main/data/docs_text/FalcoTCP/0.md"],
-        "1" : ["Protocol","https://raw.githubusercontent.com/FeatheredSystems/FeatheredWebsite/refs/heads/main/data/docs_text/FalcoTCP/1.md"],
-        "2" : ["Binary structure","https://raw.githubusercontent.com/FeatheredSystems/FeatheredWebsite/refs/heads/main/data/docs_text/FalcoTCP/2.md"],
-        "3" : ["Errors and threatment","https://raw.githubusercontent.com/FeatheredSystems/FeatheredWebsite/refs/heads/main/data/docs_text/FalcoTCP/3.md"],
-        "4" : ["Security","https://raw.githubusercontent.com/FeatheredSystems/FeatheredWebsite/refs/heads/main/data/docs_text/FalcoTCP/4.md"],
-        "5" : ["Implementations","https://raw.githubusercontent.com/FeatheredSystems/FeatheredWebsite/refs/heads/main/data/docs_text/FalcoTCP/5.md"]
+        "Why does the project exist?" : 0,
+        "Protocol" : 1,
+        "Binary structure" : 2,
+        "Errors and threatment" : 3,
+        "Security" : 4,
+        "Implementations" : 5
+    },
+    "TytoDB" : {
+        "Getting started" : 0,
+        "Compatibility" : 1,
+        "Overview" : 2,
+        "Containers" : 3,
+        "Alba Types" : 4,
+        "Indexing" : 5,
+        "Primary keys" : 6,
+        "Operations" : 7,
+        "Vacuum" : 8,
+        "MVCC" : 9,
+        "Networking" : 10,
+        "Configurations" : 11,
+        "Operation structures" : 12
     }
 }
