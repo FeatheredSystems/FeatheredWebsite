@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
 import { useEffect, useState } from "react";
+import './tytodb.css';
 
 async function fetch_meta() {
   try {
@@ -29,13 +30,21 @@ async function get_text(id) {
 }
 
 function TytoDBPage() {
-  const { content } = useParams();
+  let { content } = useParams();
   const [meta, setMeta] = useState({});
   const [text, setText] = useState("");
-  console.log(content,meta,text);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+  
+  console.log('URL content parameter:', content);
+  console.log('Meta data loaded:', meta);
+  console.log('Looking for file number:', meta[content]);
+  
   useEffect(() => {
     async function fetchMetaData() {
+      setLoading(true);
       const data = await fetch_meta();
+      console.log('Fetched meta data:', data);
       setMeta(data);
     }
     fetchMetaData();
@@ -43,15 +52,50 @@ function TytoDBPage() {
 
   useEffect(() => {
     async function fetchText() {
-      if (meta[content]) {
+      if (!content) {
+        setError("No content parameter provided");
+        setLoading(false);
+        return;
+      }
+
+      if (Object.keys(meta).length === 0) {
+        // Meta not loaded yet
+        return;
+      }
+      content = content.toLowerCase();
+      if (meta[content.toLowerCase()] !== undefined) {
+        setLoading(true);
+        setError("");
+        console.log(`Fetching file ${meta[content]}.md for content "${content}"`);
+        
         const txt = await get_text(meta[content]);
         setText(txt);
+        setLoading(false);
+      } else {
+        // Content not found in meta
+        setError(`Content "${content}" not found. Available content: ${Object.keys(meta).join(', ')}`);
+        setText("");
+        setLoading(false);
       }
     }
     fetchText();
   }, [meta, content]);
 
-  return <ReactMarkdown>{text}</ReactMarkdown>;
+  if (loading) {
+    return <div>Loading...</div>;
+  }
+
+  if (error) {
+    return <div style={{color: 'red'}}>Error: {error}</div>;
+  }
+
+  if (!text) {
+    return <div>No content available</div>;
+  }
+
+  return <div className="markdown-content">
+    <ReactMarkdown>{text}</ReactMarkdown>
+  </div>;
 }
 
 export default TytoDBPage;
