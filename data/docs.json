@@ -8,18 +8,18 @@
         "Implementations" : 5
     },
     "TytoDB" : {
-        "Getting started" : 0,
-        "Compatibility" : 1,
-        "Overview" : 2,
-        "Containers" : 3,
-        "Alba Types" : 4,
-        "Indexing" : 5,
-        "Primary keys" : 6,
-        "Operations" : 7,
-        "Vacuum" : 8,
-        "MVCC" : 9,
-        "Networking" : 10,
-        "Configurations" : 11,
-        "Operation structures" : 12
+        "getting-started" : 0,
+        "compatibility" : 1,
+        "overview" : 2,
+        "containers" : 3,
+        "alba-types" : 4,
+        "indexing" : 5,
+        "primary-keys" : 6,
+        "operations" : 7,
+        "vacuum" : 8,
+        "mvcc" : 9,
+        "networking" : 10,
+        "configurations" : 11,
+        "operation-structures" : 12
     }
 }
